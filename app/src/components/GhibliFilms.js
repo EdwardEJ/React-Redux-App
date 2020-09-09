@@ -13,7 +13,7 @@ function GhibliFilms(props) {
 }
 
 function mapStateToProps(state) {
-
+  console.log(state)
   return {
     films: state.films
   }

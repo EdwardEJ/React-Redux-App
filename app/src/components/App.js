@@ -2,13 +2,14 @@ import React, { useEffect } from 'react';
 import '../App.css';
 
 import GhibliFilms from './GhibliFilms'
+import { connect } from 'react-redux'
 import { fetchFilms } from '../store/actions/'
 
-function App({ fetchFacts }) {
+function App({ fetchFilms }) {
 
   useEffect(() => {
     fetchFilms();
-  }, [fetchFacts])
+  }, [fetchFilms])
 
   return (
     <div className="App">
@@ -19,4 +20,4 @@ function App({ fetchFacts }) {
 
 
 
-export default App;
+export default connect(() => { return {} }, { fetchFilms })(App);

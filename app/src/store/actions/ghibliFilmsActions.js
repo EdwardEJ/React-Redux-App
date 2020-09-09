@@ -11,7 +11,7 @@ export const fetchFilms = () => {
     dispatch({ type: FETCH_FILMS });
     Axios.get('https://ghibliapi.herokuapp.com/films')
       .then(res => {
-        console.log(res)
+        dispatch({ type: FETCH_FILMS_SUCCESS, payload: res.data })
       })
       .catch(res => {
         console.log(res)

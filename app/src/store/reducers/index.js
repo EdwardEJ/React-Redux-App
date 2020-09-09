@@ -2,7 +2,6 @@ import {
   FETCH_FILMS,
   FETCH_FILMS_SUCCESS,
   FETCH_FILMS_ERROR,
-  fetchFilms
 } from '../actions'
 
 const initialState = {
@@ -16,6 +15,12 @@ export default (state = initialState, action) => {
     case FETCH_FILMS: {
       return {
         ...state,
+      }
+    }
+    case FETCH_FILMS_SUCCESS: {
+      return {
+        ...state,
+        films: action.payload
       }
     }
     default:
