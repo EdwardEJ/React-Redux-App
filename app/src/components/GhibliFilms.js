@@ -12,10 +12,9 @@ function GhibliFilms(props) {
   )
 }
 
-function mapStateToProps(state) {
-  console.log(state)
+function mapStateToProps(props) {
   return {
-    films: state.films
+    films: props.films
   }
 }
 

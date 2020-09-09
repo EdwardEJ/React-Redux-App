@@ -1,10 +1,10 @@
 import React from 'react'
 
-export default function Film(props) {
+export default function Film({ film }) {
   return (
     <>
-      <h2>{props.title}</h2>
-      <p>{props.description}</p>
+      <h2>{film.title}</h2>
+      <p>{film.description}</p>
     </>
   )
 }
