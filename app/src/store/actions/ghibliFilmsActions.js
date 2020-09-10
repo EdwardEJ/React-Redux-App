@@ -9,6 +9,7 @@ export const FETCH_FILMS_ERROR = "FETCH_FILMS_ERROR";
 export const fetchFilms = () => {
   return (dispatch) => {
     dispatch({ type: FETCH_FILMS });
+
     Axios.get('https://ghibliapi.herokuapp.com/films')
       .then(res => {
         dispatch({ type: FETCH_FILMS_SUCCESS, payload: res.data })
